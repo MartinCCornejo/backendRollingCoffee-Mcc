@@ -4,6 +4,7 @@ import morgan from 'morgan';
 import 'dotenv/config';  // Permite procesar variables de entorno
 import path from 'path';
 import { fileURLToPath } from 'url';
+import productosRouter from './src/routes/productos.routes.js';
 
 // node --watch index.js - Comando experimental para desarrollo 
 console.log('Hola mundo');
@@ -32,8 +33,9 @@ const __dirname = path.dirname(__filename);
 app.use(express.static(path.join(__dirname,'/public')));
 
 // 3. Configuración de las rutas 
-app.get('/nuevo',(req, res) => {
-    console.log('Hola mundo');
-    res.send('Desde el backend de rollingCoffee');
-})
+// app.get('/nuevo',(req, res) => {
+//     console.log('Hola mundo');
+//     res.send('Desde el backend de rollingCoffee');
+// })
 
+app.use('/api', productosRouter)
