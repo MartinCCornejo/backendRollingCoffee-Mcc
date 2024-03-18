@@ -1,4 +1,6 @@
 import express from 'express';
+
+// node --watch index.js - Comando experimental para desarrollo 
 console.log('Hola mundo');
 
 
