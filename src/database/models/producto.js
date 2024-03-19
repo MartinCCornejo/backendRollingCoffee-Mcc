@@ -28,7 +28,7 @@ const productoSchema = new Schema({
     categoria:{
         type:String,
         required:true,
-        enum:['Bebidas Calientes','Bebidas Frias','Pastelería y dulces','Desayunos y Snacks']
+        enum:['Bebidas Calientes','Bebidas Frias','Pastelería y Dulces','Desayunos y Snacks']
     },
     descripcionBreve:{
         type:String,

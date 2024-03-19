@@ -4,5 +4,6 @@ import { listarProductos, crearProducto } from "../controllers/productos.control
 const router = Router();
 
 router.route('/productos').get(listarProductos).post(crearProducto)
+router.route('/productos/:id')
 
 export default router;

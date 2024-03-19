@@ -8,15 +8,13 @@ import productosRouter from './src/routes/productos.routes.js';
 import './src/database/database.js';
 
 // node --watch index.js - Comando experimental para desarrollo 
-console.log('Hola mundo');
-
 
 // 1. Configurar un puerto 
 const app = express();
 
 app.set('port', process.env.PORT || 4000);
 app.listen(app.get('port'),()=> {
-    console.log('Estoy en el puerto '+ app.get('port'))
+    console.info('Estoy en el puerto '+ app.get('port'))
 })
 
 
